@@ -1,1 +1,144 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
+span { color: #0ea5e9; }
+
+/* Navigation Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo { font-size: 24px; font-weight: bold; letter-spacing: 1px; }
+
+nav a { color: #94a3b8; text-decoration: none; margin-left: 20px; transition: 0.3s; font-weight: 500; }
+nav a:hover { color: #0ea5e9; }
+
+/* Main Section Styling */
+section { padding: 140px 10% 60px; min-height: 100vh; }
+
+/* Hero Section */
+.hero { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 40px; 
+}
+
+.hero-content h3 { color: #0ea5e9; font-size: 18px; font-weight: 500; margin-bottom: 5px; }
+.hero-content h1 { font-size: 48px; margin: 10px 0; line-height: 1.2; font-weight: 800; }
+.hero-content h2 { color: #94a3b8; margin-bottom: 20px; font-size: 24px; font-weight: 600; }
+.hero-content p { color: #94a3b8; max-width: 550px; line-height: 1.7; font-size: 16px; }
+
+/* Contact Link Button */
+.btn { 
+    display: inline-block; 
+    margin-top: 25px; 
+    padding: 12px 28px; 
+    background: #0ea5e9; 
+    color: #0f172a; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 6px; 
+    transition: 0.3s ease;
+}
+.btn:hover { 
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Social Media Icon Link */
+.social-icons { margin-top: 20px; }
+.social-icons a { color: #94a3b8; font-size: 24px; transition: 0.3s; text-decoration: none; }
+.social-icons a:hover { color: #0ea5e9; }
+
+/* Circular Frame Profile Image */
+.hero-img img { 
+    width: 280px; 
+    height: 280px; 
+    max-width: 100%;
+    border-radius: 50%; 
+    border: 4px solid #0ea5e9; 
+    object-fit: cover; 
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
+}
+
+.heading { text-align: center; font-size: 36px; margin-bottom: 50px; font-weight: 700; }
+
+/* Skills Grid Section */
+.skills-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.skill-box { 
+    background: #1e293b; 
+    padding: 25px 35px; 
+    border-radius: 12px; 
+    text-align: center; 
+    min-width: 140px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+.skill-box:hover { transform: translateY(-5px); border-color: #0ea5e9; }
+.skill-box i { font-size: 44px; color: #0ea5e9; margin-bottom: 12px; }
+.skill-box h3 { font-size: 16px; color: #f8fafc; font-weight: 600; }
+
+/* Project Layout Styling */
+.project-card { 
+    background: #1e293b; 
+    padding: 35px; 
+    border-radius: 12px; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.project-card h3 { font-size: 22px; margin-bottom: 5px; color: #f8fafc; }
+.tech { color: #0ea5e9; margin-bottom: 15px; font-weight: 600; font-size: 14px; letter-spacing: 0.5px; }
+.project-card ul { margin-left: 20px; color: #94a3b8; line-height: 1.8; font-size: 15px; }
+.project-card li { margin-bottom: 8px; }
+
+/* Education Cards Layout */
+.edu-box { 
+    background: #1e293b; 
+    padding: 30px; 
+    border-radius: 12px; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.edu-box h3 { font-size: 20px; color: #f8fafc; margin-bottom: 5px; }
+.edu-box p { color: #94a3b8; font-size: 15px; line-height: 1.6; }
+
+/* Footer Styling */
+footer { text-align: center; padding: 25px; background: #020617; color: #64748b; font-size: 14px; margin-top: 60px; }
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    header { padding: 15px 5%; }
+    section { padding: 110px 6% 40px; }
+    .hero { flex-direction: column-reverse; text-align: center; gap: 30px; }
+    .hero-content h1 { font-size: 36px; }
+    .hero-content h2 { font-size: 20px; }
+    .hero-content p { margin: 0 auto; font-size: 15px; }
+    .hero-img img { width: 220px; height: 220px; }
+    nav { display: none; } /* Simplicity for mobile links layout */
+}
